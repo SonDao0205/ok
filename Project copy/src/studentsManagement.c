@@ -298,29 +298,30 @@ void searchStudent(Student students[], int size)
         {
             temp[i] = toupper(temp[i]);
         }
-        if (strstr(temp,searchName)!=NULL)
+        if (strstr(temp,searchName) != NULL)
         {
+            printf("\nStudent Information : \n");
             printf("ID : %s\n",students[i].id);
             printf("Name : %s\n",students[i].name);
             printf("Email : %s\n",students[i].email);
             printf("Phone number : %s\n",students[i].phone);
             flag = 1;
-            backMenu();
         }
     }
     if (flag == 0)
     {
         printf("No student found!\n");
-        backMenu();
     }
+    backMenu();
 }
 
 void sortStudents(Student students[], int size)
 {
     int choice;
-    printf("[1]. Sap xep theo thu tu tang dan theo ten.\n");
-    printf("[2]. Sap xep theo thu tu giam dan theo ten.\n");
-    printf("Lua chon cua ban : ");
+    printf("[1]. Sort ascending by name.\n");
+    printf("[2]. Sort descending by name.\n");
+    printf("[3]. Exit.\n");
+    printf("Enter the choice : ");
     scanf("%d",&choice);
     switch (choice)
     {
@@ -338,7 +339,6 @@ void sortStudents(Student students[], int size)
             }
         }
         printf("Student sort success!\n");
-        
         backMenu();
         break;
     case 2:
@@ -358,11 +358,11 @@ void sortStudents(Student students[], int size)
         displayStudents(students, size);
         backMenu();
         break;
+    case 3:
+        break;
     default:
         printf("Invalid choice!\n");
-        backMenu();
         break;
-    }
-    
+    }   
 }
 

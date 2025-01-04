@@ -8,23 +8,42 @@ typedef struct
 {
     char id[100];
     char name[100];
-    int age;
     char email[200];
     char phone[15];
     char password[100];
-
-} Student;
+    int status;
+}Student;
 
 typedef struct
 {
     char username[100];
     char password[100];
-}Account;
+}adminAccount;
+
+typedef struct
+{
+    char username[100];
+    char password[100];
+}studentAccount;
+
+typedef struct
+{
+    char username[100];
+    char password[100];
+}teacherAccount;
+
 typedef struct{
     char id[100];
     char name[100];
-    int age;
     char email[200];
     char phone[15];
     char password[100];
 }Teacher;
+
+typedef struct 
+{
+    char id[100];
+    char teacherId[100];
+    char name[100];
+    Student students[100];
+}Classroom;

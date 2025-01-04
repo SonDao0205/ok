@@ -303,17 +303,17 @@ void searchTeacher(Teacher teachers[], int size)
         }
         if (strstr(temp, searchName) != NULL)
         {
+            printf("\nTeacher Information : \n");
             printf("ID : %s\n", teachers[i].id);
             printf("Name : %s\n", teachers[i].name);
             printf("Email : %s\n", teachers[i].email);
             printf("Phone number : %s\n", teachers[i].phone);
             flag = 1;
-            backMenu();
         }
     }
     if (flag == 0)
     {
         printf("No teacher found!\n");
-        backMenu();
     }
+    backMenu();
 }

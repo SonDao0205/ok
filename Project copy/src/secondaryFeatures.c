@@ -7,7 +7,7 @@ void goodBye(){
 
 void backMenu() {
     while (1) {
-        printf("Quay lai menu (b)? Thoat chuong trinh (0)? : ");
+        printf("BACK TO MENU (B)? EXIT (0)? : ");
         char x;
         fflush(stdin);
         scanf("%c", &x);
